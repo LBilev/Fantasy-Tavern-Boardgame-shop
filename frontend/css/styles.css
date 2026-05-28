@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Fantasy Tavern theme */
+:root {
+  --tavern-bg: #1e1b2e;
+  --tavern-card: #2a2640;
+  --tavern-gold: #e9b44c;
+  --tavern-teal: #6dd3ce;
+  --tavern-text: #f5f1e8;
+}
+
+body {
+  background-color: var(--tavern-bg);
+  color: var(--tavern-text);
+  font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+.navbar.bg-dark {
+  background-color: #171426 !important;
+  border-bottom: 1px solid rgba(233, 180, 76, 0.35);
+}
+
+.navbar-brand {
+  color: var(--tavern-gold) !important;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: var(--tavern-text) !important;
+}
+
+.nav-link.active {
+  color: var(--tavern-teal) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--tavern-gold);
+  font-family: 'Cinzel', 'Bree Serif', 'Times New Roman', serif;
+  letter-spacing: 0.02em;
+}
+
+.text-muted {
+  color: rgba(245, 241, 232, 0.75) !important;
+}
+
+.card,
+.list-group-item,
+.table {
+  background-color: var(--tavern-card);
+  color: var(--tavern-text);
+  border-radius: 1rem;
+}
+
+.card,
+.list-group-item,
+.table,
+.table td,
+.table th {
+  border-color: rgba(109, 211, 206, 0.25) !important;
+}
+
+.card {
+  box-shadow: 0 0.65rem 1.25rem rgba(0, 0, 0, 0.25);
+}
+
+.card-header,
+.card-footer {
+  background-color: rgba(109, 211, 206, 0.08);
+  color: var(--tavern-text);
+}
+
+.btn-primary {
+  background-color: var(--tavern-gold);
+  border-color: var(--tavern-gold);
+  color: #1a1728;
+  font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #f0c36a !important;
+  border-color: #f0c36a !important;
+  color: #1a1728 !important;
+}
+
+.btn-outline-primary {
+  color: var(--tavern-teal);
+  border-color: var(--tavern-teal);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--tavern-teal);
+  border-color: var(--tavern-teal);
+  color: #171426;
+}
+
+.btn-link {
+  color: var(--tavern-teal);
+}
+
+.btn-link:hover {
+  color: #9ee8e4;
+}
+
+.form-control,
+.form-select,
+textarea.form-control {
+  background-color: #211d34;
+  border-color: rgba(109, 211, 206, 0.35);
+  color: var(--tavern-text);
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+  background-color: #211d34;
+  color: var(--tavern-text);
+  border-color: var(--tavern-teal);
+  box-shadow: 0 0 0 0.2rem rgba(109, 211, 206, 0.2);
+}
+
+.badge.bg-primary {
+  background-color: var(--tavern-teal) !important;
+  color: #171426;
+}
+
+.text-primary {
+  color: var(--tavern-gold) !important;
+}
+
+.spinner-border.text-primary {
+  color: var(--tavern-gold) !important;
+}
+
+.product-card img {
+  height: 280px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom: 1px solid rgba(233, 180, 76, 0.25);
+}
+
+.product-card {
+  border: 1px solid rgba(233, 180, 76, 0.25);
+  overflow: hidden;
+  background:
+    linear-gradient(165deg, rgba(233, 180, 76, 0.12), rgba(42, 38, 64, 0) 45%),
+    var(--tavern-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(233, 180, 76, 0.65);
+  box-shadow:
+    0 1rem 2rem rgba(0, 0, 0, 0.35),
+    0 0 1.1rem rgba(109, 211, 206, 0.35);
+}
+
+.game-tag {
+  background-color: rgba(109, 211, 206, 0.18);
+  border: 1px solid rgba(109, 211, 206, 0.45);
+  color: var(--tavern-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+}
+
+.tavern-hero {
+  border: 1px solid rgba(233, 180, 76, 0.25);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(233, 180, 76, 0.14), transparent 42%),
+    repeating-linear-gradient(
+      -12deg,
+      rgba(245, 241, 232, 0.03),
+      rgba(245, 241, 232, 0.03) 10px,
+      rgba(42, 38, 64, 0.04) 10px,
+      rgba(42, 38, 64, 0.04) 20px
+    ),
+    rgba(42, 38, 64, 0.5);
+}
+
+.product-detail-img {
+  max-height: 400px;
+  object-fit: contain;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(109, 211, 206, 0.25);
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}

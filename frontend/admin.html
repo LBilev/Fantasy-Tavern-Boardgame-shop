@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Tavern Board Games - Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Fantasy Tavern Board Games</a>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link active" href="/admin">Admin</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <h1 class="mb-4">Guildmaster Panel</h1>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-header">Add New Board Game</div>
+          <div class="card-body">
+            <form id="add-product-form" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="product-name" class="form-label">Game Name</label>
+                <input id="product-name" type="text" class="form-control" required>
+                <div class="invalid-feedback">Product name is required.</div>
+              </div>
+              <div class="mb-3">
+                <label for="product-description" class="form-label">Description</label>
+                <textarea id="product-description" class="form-control" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="product-price" class="form-label">Price</label>
+                <input id="product-price" type="number" class="form-control" min="0.01" step="0.01" required>
+                <div class="invalid-feedback">Valid price is required.</div>
+              </div>
+              <div class="mb-3">
+                <label for="product-image" class="form-label">Image URL</label>
+                <input id="product-image" type="url" class="form-control" placeholder="https://...">
+              </div>
+              <div id="add-product-error" class="alert alert-danger d-none" role="alert"></div>
+              <div id="add-product-success" class="alert alert-success d-none" role="alert"></div>
+              <button id="add-product-submit" type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-header">Board Game Purchase Counts</div>
+          <div class="card-body">
+            <button id="refresh-sales" class="btn btn-outline-primary btn-sm mb-3">Refresh</button>
+            <div id="sales-error" class="alert alert-danger d-none" role="alert"></div>
+            <div class="table-responsive">
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th>Game</th>
+                    <th>Times Bought</th>
+                  </tr>
+                </thead>
+                <tbody id="sales-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Orders</span>
+            <button id="refresh-orders" class="btn btn-outline-primary btn-sm">Refresh</button>
+          </div>
+          <div class="card-body">
+            <div id="orders-error" class="alert alert-danger d-none" role="alert"></div>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Items</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody id="orders-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
