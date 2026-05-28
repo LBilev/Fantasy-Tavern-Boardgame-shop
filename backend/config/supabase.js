@@ -5,7 +5,7 @@ const supabaseKey = process.env.SUPABASE_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
   console.warn(
-    'Warning: SUPABASE_URL or SUPABASE_KEY missing. Set them in backend/.env'
+    'Warning: SUPABASE_URL or SUPABASE_KEY missing.'
   );
 }
 
